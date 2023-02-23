@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blogspage</title>
+  <link href="css/style.css" rel="stylesheet">
+  <!-- <h>BLOGS</h> -->
+</head>
+
+<body>
+  <nav>
+    <ul class="left">
+      <a href="login">login</a>
+      <a href="signup">signup</a>
+    </ul>
+  </nav>
+
+  <center>
+    <h1>BLOGs</h1>
+    <h3>total blogs :<%=blogsnum%></h3><br>
+  </center>
+
+  <%if(blogs.length>0){%>
+
+    <%for(let u=0;u<blogs.length;u++){%>
+      <br>
+      <div class="box-blog">
+        <p>TITLE:
+          <%=blogs[u].title%>
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          <%=blogs[u].description%>
+        </p>
+      </div>
+      <%}%>
+        <%}%>
+
+</body>
+
+</html>
